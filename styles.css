@@ -17,6 +17,7 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    min-height: 100vh;
 
     & section {
         --bs-bg-opacity: 0.8 !important;
