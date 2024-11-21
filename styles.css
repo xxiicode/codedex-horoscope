@@ -1,0 +1,29 @@
+:root {
+    --bs-primary:#ce0581;
+    --bs-bg-primary:#ce0581;
+    --bs-primary-rgb: 206, 5, 129; 
+
+}
+
+main {
+    background-image: url("/imgs/sky.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    & section {
+        --bs-bg-opacity: 0.8 !important;
+        min-height: fit-content;
+    }
+}
+
+
+h1 {
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.8);
+}
+
+@media (prefers-color-scheme: dark) {
+    h1 {
+        color: white !important;
+    }
+}
