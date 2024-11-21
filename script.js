@@ -1,7 +1,9 @@
 import { zodiacSigns, annualHoroscope, emojiHoroscope } from './horoscope.js';
 
 // variables
-const form = document.getElementById('date-checker');
+/* const form = document.getElementById('date-checker'); */
+const monthInput = document.getElementById('month');
+const dayInput = document.getElementById('day');
 const button = document.querySelector('#date-checker button');
 const signTitle = document.getElementById('yourSign')
 const answer = document.getElementById('answer')
@@ -10,8 +12,10 @@ const answer = document.getElementById('answer')
 // Event listener for the form
 button.addEventListener('click', (e) => {
     e.preventDefault();
-    console.log('!!' + form.elements['date'])
-    const dateArray = form.elements['date'].value.split('-').slice(1); //from string to array ['month', 'day']
+    const month = Number(monthInput.value);
+    const day = Number(dayInput.value); 
+/*     const dateArray = form.elements['date'].value.split('-').slice(1); //from string to array ['month', 'day'] */
+    const dateArray = [month, day]
 
     const yourSign = getZodiacSign(dateArray)
     console.log(yourSign); 
